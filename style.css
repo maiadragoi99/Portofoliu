@@ -1,0 +1,620 @@
+:root {
+    --beige: #E9DFD7;
+    --beige-deep: #D6C4B5;
+    --espresso: #211D19;
+    --brown: #4C3228;
+    --brown-light: #70452F;
+    --border: rgba(76, 50, 40, 0.30);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
+}
+
+body {
+    margin: 0;
+    background: var(--beige);
+    color: var(--espresso);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--brown-light);
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+::selection {
+    background: var(--brown);
+    color: var(--beige);
+}
+
+/* ========================================
+   2. HEADER SI NAVIGATIE
+======================================== */
+
+header {
+    min-height: 82px;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+header > p {
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+#menu-toggle {
+    display: none;
+    padding: 7px 12px;
+    border: 1px solid var(--brown);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--espresso);
+    font-size: 21px;
+    cursor: pointer;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 34px;
+    padding: 19px 20px;
+}
+
+#main-nav a {
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+#main-nav a:hover {
+    color: var(--brown-light);
+}
+
+/* ========================================
+   3. STRUCTURA PAGINILOR
+======================================== */
+
+main {
+    width: min(1120px, calc(100% - 48px));
+    margin: 44px auto 72px;
+}
+
+main > section {
+    margin-bottom: 28px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+    overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--espresso);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(36px, 5vw, 58px);
+}
+
+h2 {
+    font-size: clamp(26px, 3vw, 36px);
+}
+
+p {
+    margin-top: 0;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   4. HERO - COW PRINT
+======================================== */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 64px 36px;
+    background-color: var(--brown);
+    background-image:
+        linear-gradient(
+            rgba(33, 29, 25, 0.24),
+            rgba(33, 29, 25, 0.34)
+        ),
+        url("../images/cow-print.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--beige);
+    border: none;
+    border-radius: 3px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 690px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero .eyebrow {
+    color: var(--beige);
+}
+
+.hero h1 {
+    margin: 20px 0;
+    color: var(--beige);
+    font-size: clamp(44px, 7vw, 76px);
+    line-height: 1.04;
+    letter-spacing: -1.5px;
+}
+
+.hero-description {
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--beige);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 13px 22px;
+    border: 1px solid var(--beige);
+    background: var(--beige);
+    color: var(--espresso);
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    background: var(--espresso);
+    color: var(--beige);
+    border-color: var(--espresso);
+}
+
+.hero-number {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 19px;
+    left: 0;
+    text-align: center;
+    color: var(--beige);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* ========================================
+   5. INTRODUCEREA DE PE HOME
+======================================== */
+
+.intro {
+    max-width: 760px;
+    margin: 76px auto 58px;
+    padding: 0 20px !important;
+    border: none !important;
+    text-align: center;
+}
+
+.intro .eyebrow {
+    color: var(--brown-light);
+}
+
+.intro h2 {
+    margin: 12px 0 18px;
+    font-size: clamp(32px, 4.5vw, 48px);
+    letter-spacing: -0.8px;
+}
+
+.intro p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+/* ========================================
+   6. CELE TREI CARDURI DE PE HOME
+======================================== */
+
+.home-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 18px;
+    margin: 0 0 76px;
+}
+
+.home-link {
+    position: relative;
+    display: flex;
+    min-height: 225px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px;
+    border: 1px solid var(--border);
+    background: rgba(214, 196, 181, 0.30);
+    color: var(--espresso);
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.home-link:nth-child(2) {
+    transform: translateY(12px);
+}
+
+.home-link > span:first-child {
+    color: var(--brown-light);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.home-link h2 {
+    margin: 26px 0 10px;
+    font-size: 26px;
+}
+
+.home-link p {
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.home-link .link-arrow {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: 22px;
+}
+
+.home-link:hover {
+    transform: translateY(-5px);
+    border-color: var(--brown);
+    background: var(--beige-deep);
+    color: var(--espresso);
+}
+
+.home-link:nth-child(2):hover {
+    transform: translateY(7px);
+}
+
+/* ========================================
+   7. PROIECTE
+======================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+}
+
+.project-card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: rgba(214, 196, 181, 0.22);
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card h2,
+.project-card h3 {
+    margin-top: 0;
+    color: var(--brown);
+    font-size: 24px;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(214, 196, 181, 0.55);
+    box-shadow: 0 10px 24px rgba(33, 29, 25, 0.06);
+}
+
+/* ========================================
+   8. FORMULARUL DE CONTACT
+======================================== */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 24px auto 0;
+}
+
+#contact-form label {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.16);
+    color: var(--espresso);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--brown-light);
+    box-shadow: 0 0 0 3px rgba(112, 69, 47, 0.10);
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    align-self: flex-start;
+    margin-top: 12px;
+    padding: 13px 22px;
+    border: 1px solid var(--espresso);
+    border-radius: 3px;
+    background: var(--espresso);
+    color: var(--beige);
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+#contact-form button:hover {
+    background: var(--brown-light);
+    border-color: var(--brown-light);
+}
+
+#form-status {
+    margin-top: 16px;
+}
+
+/* ========================================
+   9. FOOTER
+======================================== */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 60px;
+    padding: 36px 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+footer p,
+footer small {
+    margin: 0;
+}
+
+footer p {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+footer small {
+    font-size: 12px;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 9px 15px;
+    border: 1px solid var(--brown);
+    border-radius: 3px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+footer a:hover {
+    background: var(--espresso);
+    color: var(--beige);
+}
+
+/* ========================================
+   10. TABLETE SI TELEFOANE
+======================================== */
+
+@media (max-width: 760px) {
+    main {
+        width: calc(100% - 32px);
+        margin: 28px auto 48px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-links {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 52px;
+    }
+
+    .home-link {
+        min-height: 190px;
+    }
+
+    .home-link:nth-child(2),
+    .home-link:nth-child(2):hover {
+        transform: none;
+    }
+
+    .intro {
+        margin: 54px auto 40px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        min-height: 72px;
+        padding: 14px 18px;
+        flex-wrap: wrap;
+    }
+
+    #menu-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    header > p {
+        font-size: 10px;
+    }
+
+    #main-nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 18px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    #main-nav.is-open {
+        display: flex;
+    }
+
+    main {
+        width: calc(100% - 28px);
+        margin: 22px auto 42px;
+    }
+
+    main > section {
+        padding: 19px;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 36px 20px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 11vw, 54px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .intro {
+        margin: 46px auto 34px;
+        padding: 0 8px !important;
+    }
+
+    .intro h2 {
+        font-size: 34px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 23px;
+    }
+
+    footer {
+        margin-top: 42px;
+        padding: 28px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

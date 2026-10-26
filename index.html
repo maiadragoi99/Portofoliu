@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E9DFD7">
+    <meta name="description" content="Portofoliul personal al Maiei-Cristina Drăgoi. Proiecte web, competențe și contact.">
+    <title>Portofoliu — Drăgoi Maia-Cristina</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top">
+
+    <header>
+        <a href="index.html" class="logo">M.D.</a>
+
+        <p>EST. 2026</p>
+
+        <button
+            id="menu-toggle"
+            type="button"
+            aria-label="Deschide meniul"
+            aria-expanded="false"
+            aria-controls="main-nav">
+            ☰
+        </button>
+    </header>
+
+    <nav id="main-nav">
+        <a href="index.html">Acasă</a>
+        <a href="about.html">Despre mine</a>
+        <a href="projects.html">Proiectele mele</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- HERO: imaginea cow print -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Portofoliu personal · 2026</p>
+
+                <h1>Bun venit.</h1>
+
+                <p class="hero-description">
+                    Sunt Drăgoi Maia-Cristina și acesta este portofoliul
+                    meu, unde învăț, experimentez și îmi dezvolt
+                    proiectele web.
+                </p>
+
+                <a class="hero-button" href="projects.html">
+                    Descoperă proiectele
+                </a>
+            </div>
+
+            <span class="hero-number">01 / PORTOFOLIU</span>
+        </section>
+
+        <!-- INTRODUCERE PERSONALA -->
+        <section class="intro">
+            <p class="eyebrow">Câteva lucruri despre mine</p>
+
+            <h2>Portofoliu — Drăgoi Maia-Cristina</h2>
+
+            <p>
+                Bună! Acesta este spațiul în care îmi prezint parcursul,
+                proiectele și abilitățile pe care le dezvolt în
+                domeniul web. Fiecare exercițiu este o ocazie de a
+                învăța ceva nou și de a-mi transforma ideile în pagini web.
+            </p>
+        </section>
+
+        <!-- CELE TREI DIRECTII PRINCIPALE -->
+        <section class="home-links" aria-label="Explorează portofoliul">
+
+            <a class="home-link" href="about.html">
+                <span>01</span>
+                <h2>Despre mine</h2>
+                <p>Parcursul meu, interesele și abilitățile pe care le dezvolt.</p>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="home-link" href="projects.html">
+                <span>02</span>
+                <h2>Proiecte</h2>
+                <p>Exercițiile și proiectele prin care îmi pun în practică ideile.</p>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="home-link" href="contact.html">
+                <span>03</span>
+                <h2>Contact</h2>
+                <p>Un loc în care putem lua legătura.</p>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+        </section>
+
+        <!-- PREZENTARE PROIECTE -->
+        <section id="projects">
+            <p class="eyebrow">Selecție</p>
+            <h2>Proiectele mele</h2>
+
+            <p>
+                Aici voi prezenta proiectele și exercițiile prin care
+                îmi exersez abilitățile de HTML, CSS și JavaScript.
+            </p>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <h3>Portofoliu personal</h3>
+                    <p>
+                        Un site realizat cu HTML, CSS și JavaScript
+                        pentru a-mi prezenta parcursul și proiectele.
+                    </p>
+                    <a href="projects.html">Explorează proiectele ↗</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Exerciții web</h3>
+                    <p>
+                        Exerciții de structurare a paginilor cu HTML
+                        și de stilizare cu CSS.
+                    </p>
+                    <a href="projects.html">Vezi pagina de proiecte ↗</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>În continuă dezvoltare</h3>
+                    <p>
+                        Îmi dezvolt treptat cunoștințele și aplic
+                        conceptele învățate în proiecte noi.
+                    </p>
+                    <a href="about.html">Află mai multe ↗</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <p class="eyebrow">Hai să ținem legătura</p>
+            <h2>Contact</h2>
+
+            <p>
+                Ai o întrebare sau vrei să îmi transmiți un mesaj?
+                Completează formularul de mai jos.
+            </p>
+
+            <form id="contact-form">
+
+                <label for="name">Numele tău</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    required>
+
+                <label for="email">Adresa de e-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required>
+
+                <label for="message">Mesajul tău</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required></textarea>
+
+                <button type="submit">Trimite mesajul</button>
+
+            </form>
+
+            <p id="form-status" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>M.D.</p>
+        <small>Portofoliu personal · Drăgoi Maia-Cristina · 2026</small>
+        <a href="#top">Înapoi sus ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
